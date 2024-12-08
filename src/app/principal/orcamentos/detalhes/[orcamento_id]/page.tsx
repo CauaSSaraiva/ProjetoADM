@@ -5,16 +5,13 @@
 import { OrcamentoI } from "@/utils/types/orcamentos";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+
 
 
 import { useRouter } from "next/navigation";
 
 
-type Inputs = {
-  descricao: string;
-  dataSolicitada: Date;
-};
+
 
 export default function Detalhes() {
   const params = useParams();
@@ -23,7 +20,7 @@ export default function Detalhes() {
   const [statusAtual, setStatus] = useState("");
   const [telCliente, setTel] = useState("");
   const [nomeCliente, setNome] = useState("")
-  const { register, handleSubmit, reset } = useForm<Inputs>();
+  // const { register, handleSubmit, reset } = useForm<Inputs>();
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
